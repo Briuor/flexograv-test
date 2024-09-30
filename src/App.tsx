@@ -1,24 +1,13 @@
-import { Header } from "./components/Header";
-import { Navbar } from "./components/Navbar";
 
-function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <div>
-      <Header />
-      <Navbar />
-      {children}
-    </div>
-  )
-}
+import { Layout } from "./components/Layout";
+import { Dashboard } from "./pages/Dashboard";
 
 function App() {
   return (
-    <div className="App bg-[#4a4a4a]">
+    <div>
       <Layout>
-        {/* <MainContent /> */}
-        <p>teste</p>
+        <Dashboard />
       </Layout>
-
     </div>
   );
 }
