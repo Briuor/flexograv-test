@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./components/Header";
+import { Navbar } from "./components/Navbar";
+
+function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <div>
+      <Header />
+      <Navbar />
+      {children}
+    </div>
+  )
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-[#4a4a4a]">
+      <Layout>
+        {/* <MainContent /> */}
+        <p>teste</p>
+      </Layout>
+
     </div>
   );
 }
